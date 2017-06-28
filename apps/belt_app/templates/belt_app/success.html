@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success</title>
+</head>
+<body>
+	<a href="/logout">Logout</a>
+		{% if messages %}
+	<h1>Success! Welcome, {{ request.session.username }}</h1>
+		{% for message in messages %}
+			<p>{{ message }}</p>
+		{% endfor %}
+	{% endif %}
+</body>
+</html>
